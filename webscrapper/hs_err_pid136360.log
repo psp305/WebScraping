@@ -1,0 +1,200 @@
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (mmap) failed to map 65536 bytes for Failed to commit area from 0x000001c45eea0000 to 0x000001c45eeb0000 of length 65536.
+# Possible reasons:
+#   The system is out of physical RAM or swap space
+#   The process is running with CompressedOops enabled, and the Java Heap may be blocking the growth of the native heap
+# Possible solutions:
+#   Reduce memory load on the system
+#   Increase physical memory or swap space
+#   Check if swap backing store is full
+#   Decrease Java heap size (-Xmx/-Xms)
+#   Decrease number of Java threads
+#   Decrease Java thread stack sizes (-Xss)
+#   Set larger code cache with -XX:ReservedCodeCacheSize=
+# This output file may be truncated or incomplete.
+#
+#  Out of Memory Error (os_windows.cpp:3386), pid=136360, tid=14252
+#
+# JRE version:  (11.0.21+9) (build )
+# Java VM: OpenJDK 64-Bit Server VM (11.0.21+9-adhoc..jdk11u, mixed mode, sharing, tiered, compressed oops, g1 gc, windows-amd64)
+# No core dump will be written. Minidumps are not enabled by default on client versions of Windows
+#
+
+---------------  S U M M A R Y ------------
+
+Command Line: -Dfile.encoding=UTF-8 com.web.webscrapper.RBIScrapper
+
+Host: AMD Ryzen 7 5800H with Radeon Graphics         , 16 cores, 13G,  Windows 11 , 64 bit Build 22621 (10.0.22621.2506)
+Time: Tue Feb 27 02:57:15 2024 India Standard Time elapsed time: 0.020604 seconds (0d 0h 0m 0s)
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x000001c447099000):  JavaThread "Unknown thread" [_thread_in_vm, id=14252, stack(0x00000079b6800000,0x00000079b6900000)]
+
+Stack: [0x00000079b6800000,0x00000079b6900000]
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [jvm.dll+0x64172a]
+V  [jvm.dll+0x7863e9]
+V  [jvm.dll+0x787ae9]
+V  [jvm.dll+0x7881d3]
+V  [jvm.dll+0x268015]
+V  [jvm.dll+0x63e949]
+V  [jvm.dll+0x632ec5]
+V  [jvm.dll+0x32393c]
+V  [jvm.dll+0x3237c2]
+V  [jvm.dll+0x3284b0]
+V  [jvm.dll+0x370488]
+V  [jvm.dll+0x36fec1]
+V  [jvm.dll+0x2ff0f8]
+V  [jvm.dll+0x3001f5]
+V  [jvm.dll+0x75f697]
+V  [jvm.dll+0x760e5f]
+V  [jvm.dll+0x37d829]
+V  [jvm.dll+0x74184f]
+V  [jvm.dll+0x3ee1e7]
+V  [jvm.dll+0x3f04f1]
+C  [jli.dll+0x52ef]
+C  [ucrtbase.dll+0x29363]
+C  [KERNEL32.DLL+0x1257d]
+C  [ntdll.dll+0x5aa58]
+
+
+---------------  P R O C E S S  ---------------
+
+Threads class SMR info:
+_java_thread_list=0x000001c444e78b30, length=0, elements={
+}
+
+Java Threads: ( => current thread )
+
+Other Threads:
+  0x000001c4470b1000 GCTaskThread "GC Thread#0" [stack: 0x00000079b6900000,0x00000079b6a00000] [id=126380]
+  0x000001c447104000 ConcurrentGCThread "G1 Main Marker" [stack: 0x00000079b6a00000,0x00000079b6b00000] [id=137944]
+  0x000001c447105800 ConcurrentGCThread "G1 Conc#0" [stack: 0x00000079b6b00000,0x00000079b6c00000] [id=135756]
+
+[error occurred during error reporting (printing all threads), id 0xc0000005, EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x00007ff9a9e5fb37]
+
+VM state:not at safepoint (not fully initialized)
+
+VM Mutex/Monitor currently owned by a thread:  ([mutex/lock_event])
+[0x000001c4470976b0] Heap_lock - owner thread: 0x000001c447099000
+
+Heap address: 0x0000000722400000, size: 3548 MB, Compressed Oops mode: Non-zero based: 0x0000000722400000
+Narrow klass base: 0x0000000000000000, Narrow klass shift: 0
+
+GC Heap History (0 events):
+No events
+
+Deoptimization events (0 events):
+No events
+
+Classes redefined (0 events):
+No events
+
+Internal exceptions (0 events):
+No events
+
+Events (1 events):
+Event: 0.006 Loaded shared library C:\Program Files\OpenLogic\jre-11.0.21.9-hotspot\bin\zip.dll
+
+
+Dynamic libraries:
+0x00007ff602b90000 - 0x00007ff602b9e000 	C:\Program Files\OpenLogic\jre-11.0.21.9-hotspot\bin\javaw.exe
+0x00007ffa5a890000 - 0x00007ffa5aaa7000 	C:\WINDOWS\SYSTEM32\ntdll.dll
+0x00007ffa59fd0000 - 0x00007ffa5a094000 	C:\WINDOWS\System32\KERNEL32.DLL
+0x00007ffa57f80000 - 0x00007ffa58326000 	C:\WINDOWS\System32\KERNELBASE.dll
+0x00007ffa584c0000 - 0x00007ffa585d1000 	C:\WINDOWS\System32\ucrtbase.dll
+0x00007ffa2fc50000 - 0x00007ffa2fc67000 	C:\Program Files\OpenLogic\jre-11.0.21.9-hotspot\bin\jli.dll
+0x00007ffa5a1e0000 - 0x00007ffa5a38e000 	C:\WINDOWS\System32\USER32.dll
+0x00007ffa299c0000 - 0x00007ffa299db000 	C:\Program Files\OpenLogic\jre-11.0.21.9-hotspot\bin\VCRUNTIME140.dll
+0x00007ffa58330000 - 0x00007ffa58356000 	C:\WINDOWS\System32\win32u.dll
+0x00007ffa45710000 - 0x00007ffa459a3000 	C:\WINDOWS\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.22621.2506_none_270c5ae97388e100\COMCTL32.dll
+0x00007ffa59fa0000 - 0x00007ffa59fc9000 	C:\WINDOWS\System32\GDI32.dll
+0x00007ffa5a6c0000 - 0x00007ffa5a767000 	C:\WINDOWS\System32\msvcrt.dll
+0x00007ffa57d40000 - 0x00007ffa57e58000 	C:\WINDOWS\System32\gdi32full.dll
+0x00007ffa58360000 - 0x00007ffa583fa000 	C:\WINDOWS\System32\msvcp_win.dll
+0x00007ffa58b50000 - 0x00007ffa58b81000 	C:\WINDOWS\System32\IMM32.DLL
+0x00007ffa416d0000 - 0x00007ffa416dc000 	C:\Program Files\OpenLogic\jre-11.0.21.9-hotspot\bin\vcruntime140_1.dll
+0x00007ffa23140000 - 0x00007ffa231cd000 	C:\Program Files\OpenLogic\jre-11.0.21.9-hotspot\bin\msvcp140.dll
+0x00007ff9a9b50000 - 0x00007ff9aa69d000 	C:\Program Files\OpenLogic\jre-11.0.21.9-hotspot\bin\server\jvm.dll
+0x00007ffa5a5a0000 - 0x00007ffa5a653000 	C:\WINDOWS\System32\ADVAPI32.dll
+0x00007ffa58740000 - 0x00007ffa587e8000 	C:\WINDOWS\System32\sechost.dll
+0x00007ffa57f50000 - 0x00007ffa57f78000 	C:\WINDOWS\System32\bcrypt.dll
+0x00007ffa5a0c0000 - 0x00007ffa5a1d7000 	C:\WINDOWS\System32\RPCRT4.dll
+0x00007ffa59380000 - 0x00007ffa59388000 	C:\WINDOWS\System32\PSAPI.DLL
+0x00007ffa4ef30000 - 0x00007ffa4ef64000 	C:\WINDOWS\SYSTEM32\WINMM.dll
+0x00007ffa351e0000 - 0x00007ffa351e9000 	C:\WINDOWS\SYSTEM32\WSOCK32.dll
+0x00007ffa4d050000 - 0x00007ffa4d05a000 	C:\WINDOWS\SYSTEM32\VERSION.dll
+0x00007ffa58b90000 - 0x00007ffa58c01000 	C:\WINDOWS\System32\WS2_32.dll
+0x00007ffa56c10000 - 0x00007ffa56c28000 	C:\WINDOWS\SYSTEM32\kernel.appcore.dll
+0x00007ffa51690000 - 0x00007ffa516a0000 	C:\Program Files\OpenLogic\jre-11.0.21.9-hotspot\bin\verify.dll
+0x00007ffa55120000 - 0x00007ffa55353000 	C:\WINDOWS\SYSTEM32\DBGHELP.DLL
+0x00007ffa593b0000 - 0x00007ffa59739000 	C:\WINDOWS\System32\combase.dll
+0x00007ffa58c90000 - 0x00007ffa58d67000 	C:\WINDOWS\System32\OLEAUT32.dll
+0x00007ffa329a0000 - 0x00007ffa329d2000 	C:\WINDOWS\SYSTEM32\dbgcore.DLL
+0x00007ffa57ed0000 - 0x00007ffa57f4a000 	C:\WINDOWS\System32\bcryptPrimitives.dll
+0x00007ffa2cbb0000 - 0x00007ffa2cbd8000 	C:\Program Files\OpenLogic\jre-11.0.21.9-hotspot\bin\java.dll
+0x00007ffa439e0000 - 0x00007ffa439ea000 	C:\Program Files\OpenLogic\jre-11.0.21.9-hotspot\bin\jimage.dll
+0x00007ffa2ca00000 - 0x00007ffa2ca18000 	C:\Program Files\OpenLogic\jre-11.0.21.9-hotspot\bin\zip.dll
+
+dbghelp: loaded successfully - version: 4.0.5 - missing functions: none
+symbol engine: initialized successfully - sym options: 0x614 - pdb path: .;C:\Program Files\OpenLogic\jre-11.0.21.9-hotspot\bin;C:\WINDOWS\SYSTEM32;C:\WINDOWS\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.22621.2506_none_270c5ae97388e100;C:\Program Files\OpenLogic\jre-11.0.21.9-hotspot\bin\server
+
+VM Arguments:
+jvm_args: -Dfile.encoding=UTF-8 
+java_command: com.web.webscrapper.RBIScrapper
+java_class_path (initial): Z:\web-wk\webscrapper\webscrapper\target\classes;C:\Users\panki\.m2\repository\org\springframework\boot\spring-boot-starter\2.5.5\spring-boot-starter-2.5.5.jar;C:\Users\panki\.m2\repository\org\springframework\boot\spring-boot\2.5.5\spring-boot-2.5.5.jar;C:\Users\panki\.m2\repository\org\springframework\spring-context\5.3.10\spring-context-5.3.10.jar;C:\Users\panki\.m2\repository\org\springframework\spring-aop\5.3.10\spring-aop-5.3.10.jar;C:\Users\panki\.m2\repository\org\springframework\spring-beans\5.3.10\spring-beans-5.3.10.jar;C:\Users\panki\.m2\repository\org\springframework\spring-expression\5.3.10\spring-expression-5.3.10.jar;C:\Users\panki\.m2\repository\org\springframework\boot\spring-boot-autoconfigure\2.5.5\spring-boot-autoconfigure-2.5.5.jar;C:\Users\panki\.m2\repository\org\springframework\boot\spring-boot-starter-logging\2.5.5\spring-boot-starter-logging-2.5.5.jar;C:\Users\panki\.m2\repository\ch\qos\logback\logback-classic\1.2.6\logback-classic-1.2.6.jar;C:\Users\panki\.m2\repository\ch\qos\logback\logback-core\1.2.6\logback-core-1.2.6.jar;C:\Users\panki\.m2\repository\org\apache\logging\log4j\log4j-to-slf4j\2.14.1\log4j-to-slf4j-2.14.1.jar;C:\Users\panki\.m2\repository\org\apache\logging\log4j\log4j-api\2.14.1\log4j-api-2.14.1.jar;C:\Users\panki\.m2\repository\org\slf4j\jul-to-slf4j\1.7.32\jul-to-slf4j-1.7.32.jar;C:\Users\panki\.m2\repository\jakarta\annotation\jakarta.annotation-api\1.3.5\jakarta.annotation-api-1.3.5.jar;C:\Users\panki\.m2\repository\org\springframework\spring-core\5.3.10\spring-core-5.3.10.jar;C:\Users\panki\.m2\repository\org\springframework\spring-jcl\5.3.10\spring-jcl-5.3.10.jar;C:\Users\panki\.m2\repository\org\yaml\snakeyaml\1.28\snakeyaml-1.28.jar;C:\Users\panki\.m2\repository\org\springframework\boot\spring-boot-devtools\2.5.5\spring-boot-devtools-2.5.5.jar;C:\Users\panki\.m2\repository\org\slf4j\slf4j-api\1.7.32\slf4j-api-1.7.32.jar;C:\Users\panki\.m2\repository\org\seleniumhq\selenium\selenium-
+Launcher Type: SUN_STANDARD
+
+[Global flags]
+     intx CICompilerCount                          = 12                                        {product} {ergonomic}
+     uint ConcGCThreads                            = 3                                         {product} {ergonomic}
+     uint G1ConcRefinementThreads                  = 13                                        {product} {ergonomic}
+   size_t G1HeapRegionSize                         = 1048576                                   {product} {ergonomic}
+    uintx GCDrainStackTargetSize                   = 64                                        {product} {ergonomic}
+   size_t InitialHeapSize                          = 232783872                                 {product} {ergonomic}
+   size_t MarkStackSize                            = 4194304                                   {product} {ergonomic}
+   size_t MaxHeapSize                              = 3720347648                                {product} {ergonomic}
+   size_t MinHeapDeltaBytes                        = 1048576                                   {product} {ergonomic}
+    uintx NonNMethodCodeHeapSize                   = 7594288                                {pd product} {ergonomic}
+    uintx NonProfiledCodeHeapSize                  = 122031976                              {pd product} {ergonomic}
+    uintx ProfiledCodeHeapSize                     = 122031976                              {pd product} {ergonomic}
+    uintx ReservedCodeCacheSize                    = 251658240                              {pd product} {ergonomic}
+     bool SegmentedCodeCache                       = true                                      {product} {ergonomic}
+     bool UseCompressedClassPointers               = true                                 {lp64_product} {ergonomic}
+     bool UseCompressedOops                        = true                                 {lp64_product} {ergonomic}
+     bool UseG1GC                                  = true                                      {product} {ergonomic}
+     bool UseLargePagesIndividualAllocation        = false                                  {pd product} {ergonomic}
+
+Logging:
+Log output configuration:
+ #0: stdout all=warning uptime,level,tags
+ #1: stderr all=off uptime,level,tags
+
+Environment Variables:
+PATH=C:/Program Files/OpenLogic/jre-11.0.21.9-hotspot/bin/server;C:/Program Files/OpenLogic/jre-11.0.21.9-hotspot/bin;C:\Program Files\OpenLogic\jre-11.0.21.9-hotspot\bin;C:\Program Files\Eclipse Adoptium\jdk-8.0.392.8-hotspot\bin;C:\Program Files (x86)\Common Files\Intel\Shared Libraries\redist\intel64\compiler;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Razer\ChromaBroadcast\bin;C:\Program Files\Razer\ChromaBroadcast\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Windows\system32\config\systemprofile\AppData\Local\Microsoft\WindowsApps;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\PuTTY\;C:\Program Files\Docker\Docker\resources\bin;C:\Program Files\nodejs\;C:\Program Files\Git\cmd;C:\Ruby32-x64\bin;C:\Users\panki\AppData\Local\Microsoft\WindowsApps;C:\Program Files\JetBrains\IntelliJ IDEA 2022.1.2\bin;;C:\Users\panki\AppData\Roaming\npm;C:\Users\panki\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\panki\AppData\Roaming\npm\node_modules\@angular\cli\bin;C:\WINDOWS\System32;
+USERNAME=panki
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=AMD64 Family 25 Model 80 Stepping 0, AuthenticAMD
+TMP=C:\Users\panki\AppData\Local\Temp
+TEMP=C:\Users\panki\AppData\Local\Temp
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows 11 , 64 bit Build 22621 (10.0.22621.2506)
+OS uptime: 36 days 13:56 hours
+Hyper-V role detected
+
+CPU:total 16 (initial active 16) (16 cores per cpu, 2 threads per core) family 25 model 80 stepping 0 microcode 0x0, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, avx, avx2, aes, clmul, erms, mmxext, 3dnowpref, lzcnt, sse4a, ht, tsc, tscinvbit, tscinv, bmi1, bmi2, adx, sha, fma
+
+Memory: 4k page, system-wide physical 14188M (899M free)
+TotalPageFile size 57196M (AvailPageFile size 10M)
+current process WorkingSet (physical memory assigned to process): 14M, peak: 14M
+current process commit charge ("private bytes"): 297M, peak: 297M
+
+vm_info: OpenJDK 64-Bit Server VM (11.0.21+9-adhoc..jdk11u) for windows-amd64 JRE (11.0.21+9-adhoc..jdk11u), built on Oct 18 2023 09:35:41 by "" with MS VC++ 16.10 / 16.11 (VS2019)
+
+END.
